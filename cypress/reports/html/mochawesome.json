@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-05T10:14:47.815Z",
+    "end": "2024-04-05T10:14:53.649Z",
+    "duration": 5834,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e939e5fb-50e2-413f-9e28-3a3571b70954",
+      "title": "",
+      "fullFile": "cypress\\e2e\\AytuComWebsiteTest.cy.js",
+      "file": "cypress\\e2e\\AytuComWebsiteTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2be52fc0-d1f8-4bcc-9402-e756f2a2133a",
+          "title": "Aytu.com Website Contact Form Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Aytu.com Website Contact Form Test",
+              "fullTitle": "Aytu.com Website Contact Form Test Suite Aytu.com Website Contact Form Test",
+              "timedOut": null,
+              "duration": 3363,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/* ==== Generated with Cypress Studio ==== */\ncy.visit('https://aytu.com/kontakt');\n// cy.get('button.cm__btn[data-role=\"all\"]').click();\ncy.log('Test started');\ncy.get('#first-name').clear('Max');\ncy.get('#first-name').type('Max');\ncy.get('#last-name').clear();\ncy.get('#last-name').type('Mustermann');\ncy.get('#company').clear();\ncy.get('#company').type('Musterfirma123');\ncy.get('#email').clear();\ncy.get('#email').type('max.mustermann123@musterfirma123.de');\ncy.get('#first-name').clear();\ncy.get('#first-name').type('Max');\ncy.get('#message').click();\ncy.get('#datenschutz').check();\ncy.get('.bg-stone-800').click();\ncy.log('Test finished');\n/* ==== End Cypress Studio ==== */",
+              "err": {},
+              "uuid": "297a2bc4-8770-4469-94a8-2649d69ffe49",
+              "parentUUID": "2be52fc0-d1f8-4bcc-9402-e756f2a2133a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "297a2bc4-8770-4469-94a8-2649d69ffe49"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3363,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/html",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
