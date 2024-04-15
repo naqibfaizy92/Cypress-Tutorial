@@ -1,0 +1,164 @@
+<div>
+    <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
+        <div>
+            <label
+                for="first-name"
+                class="block text-sm font-medium leading-6 text-stone-900 "
+                >Vorname</label
+            >
+            <div class="mt-2.5">
+                <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    autocomplete="given-name"
+                    class="bg-stone-100 rounded-sm-md block w-full border-0 px-3.5 py-2 text-stone-900 shadow-sm ring-1 ring-inset ring-stone-300/20 placeholder:text-stone-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
+                />
+            </div>
+        </div>
+        <div>
+            <label
+                for="last-name"
+                class="block text-sm font-medium leading-6 text-stone-900 "
+                >Nachname*</label
+            >
+            <div class="mt-2.5">
+                <input
+                    type="text"
+                    name="last-name"
+                    required
+                    id="last-name"
+                    autocomplete="family-name"
+                    class="bg-stone-100 rounded-sm-md block w-full border-0 px-3.5 py-2 text-stone-900 shadow-sm ring-1 ring-inset ring-stone-300/20 placeholder:text-stone-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
+                />
+            </div>
+        </div>
+        <div class="sm:col-span-2">
+            <label
+                for="company"
+                class="block text-sm font-medium leading-6 text-stone-900 "
+                >Unternehmen</label
+            >
+            <div class="mt-2.5">
+                <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    autocomplete="organization"
+                    class="bg-stone-100 rounded-sm-md block w-full border-0 px-3.5 py-2 text-stone-900 shadow-sm ring-1 ring-inset ring-stone-300/20 placeholder:text-stone-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
+                />
+            </div>
+        </div>
+        <div class="sm:col-span-1">
+            <label
+                for="email"
+                class="block text-sm font-medium leading-6 text-stone-900 "
+                >Email*</label
+            >
+            <div class="mt-2.5">
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    id="email"
+                    autocomplete="email"
+                    class="bg-stone-100 rounded-sm-md block w-full border-0 px-3.5 py-2 text-stone-900 shadow-sm ring-1 ring-inset ring-stone-300/20 placeholder:text-stone-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
+                />
+            </div>
+        </div>
+        <div class="sm:col-span-1">
+            <label
+                for="phone-number"
+                class="block text-sm font-medium leading-6 text-stone-900 "
+                >Telefonnummer</label
+            >
+            <div class="relative mt-2.5">
+                <input
+                    type="tel"
+                    name="phone-number"
+                    id="phone-number"
+                    autocomplete="tel"
+                    class="bg-stone-100 rounded-sm-md block w-full border-0 px-3.5 py-2 text-stone-900 shadow-sm ring-1 ring-inset ring-stone-300/20 placeholder:text-stone-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
+                />
+            </div>
+        </div>
+        <div class="sm:col-span-2">
+            <label
+                for="message"
+                class="block text-sm font-medium leading-6 text-stone-900 "
+                >Nachricht</label
+            >
+            <div class="mt-2.5">
+                <textarea
+                    name="message"
+                    id="message"
+                    rows="3"
+                    class="bg-stone-100 rounded-sm-md block w-full border-0 px-3.5 py-2 text-stone-900 shadow-sm ring-1 ring-inset ring-stone-300/20 placeholder:text-stone-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
+                ></textarea>
+            </div>
+        </div>
+        <div class="flex gap-x-4 sm:col-span-2">
+            <div class="flex h-6 items-center">
+                <input
+                    type="checkbox"
+                    name="datenschutz"
+                    id="datenschutz"
+                    aria-checked="false"
+                    required
+                    aria-labelledby="datenschutz-checkbox"
+                    class="bg-stone-500 checked:bg-stone-400 rounded-sm-none flex flex-none cursor-pointer p-px ring-1 ring-inset ring-stone-100/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-400 accent-stone-300"
+                />
+            </div>
+            <label
+                class="text-sm leading-6"
+                for="datenschutz"
+                id="datenschutz-checkbox"
+            >
+                Ich erkläre mich mit der <a
+                    href="/datenschutz"
+                    class="a-underline underline"
+                    >Datenschutzerklärung</a
+                >
+                einverstanden.*
+            </label>
+        </div>
+    </div>
+    <div class="mt-8">
+        <div id="success-message" class="hidden max-w-1/2 p-4 mb-10 bg-green-500/20 border border-green-500/50 text-green-800 dark:text-green-100">
+            Vielen Dank für Ihre Anfrage. Wir werden uns in Kürze bei Ihnen melden.
+        </div>
+        <div id="error-message" class="hidden max-w-1/2 p-4 mb-10 bg-red-500/20 border border-red-500/50 text-red-800 dark:text-red-100">
+            Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.
+        </div>
+        <button
+            id="contact-button"
+            class="bg-stone-800 px-4 py-3 rounded-sm text-stone-100 hover:bg-stone-700 shadow-sm transition-colors w-full sm:w-fit font-medium"
+        >
+            Kontakt aufnehmen
+        </button>
+    </div>
+</div>
+<script>
+    document.getElementById('contact-button').addEventListener("click", () => {
+        // Hier werden alle Eingabefelder auf Gültigkeit überprüft, um isSuccess und isError zu aktualisieren
+        const firstName = document.getElementById('first-name').value.trim();
+        const lastName = document.getElementById('last-name').value.trim();
+        const company = document.getElementById('company').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phoneNumber = document.getElementById('phone-number').value.trim();
+        const datenschutzChecked = document.getElementById('datenschutz').checked;
+
+        const isSuccess = firstName !== '' && lastName !== '' && email !== '' && datenschutzChecked;
+        const isError = !isSuccess;
+
+        // Abhängig von isSuccess und isError das entsprechende DIV anzeigen
+        if (isSuccess) {
+            document.getElementById('success-message').classList.remove('hidden');
+            document.getElementById('error-message').classList.add('hidden');
+        } else {
+            document.getElementById('success-message').classList.add('hidden');
+            document.getElementById('error-message').classList.remove('hidden');
+        }
+    });
+</script>
+
