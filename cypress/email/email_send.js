@@ -3,17 +3,17 @@ const fs = require('fs');
 
 // Konfiguration für den E-Mail-Versand
 const transporter = nodemailer.createTransport({
-    host: 'smtp.hostinger.com', // SMTP-Server
-    port: 465, // SMTP-Port
+    host: 'hostname', // SMTP-Server
+    port: 'portnumber', // SMTP-Port
     secure: true, // SMTP-Verschlüsselung (true für SSL, false für STARTTLS)
     auth: {
-        user: 'n.faizy@buddy2learn.com', // Deine E-Mail-Adresse
-        pass: 'sxeknmfksdnfplsdmfmsSS11!' // Dein Passwort
+        user: 'email', // Deine E-Mail-Adresse
+        pass: 'password' // Dein Passwort
     }
 });
 
 // Empfänger der E-Mail
-const to = 'n.faizy@aytu.de'; // E-Mail-Adresse des Empfängers (mehrere Empfänger hinzufügen)
+const to = 'email'; // E-Mail-Adresse des Empfängers (mehrere Empfänger hinzufügen)
 
 // Betreff und Text der E-Mail
 const subject = 'Testbericht';
@@ -23,14 +23,14 @@ const text = 'Anbei finden Sie den Testbericht als Anhang.';
 const reportFileName = 'index.html';
 
 // Pfad zum Testbericht
-const filePath = `C:\\Users\\afg_p\\Desktop\\Cypress\\cypress\\reports\\${reportFileName}`; 
+const filePath = `PfadZumTestbericht\\${reportFileName}`; 
 
 // Stream für den Inhalt der HTML-Datei erstellen
 const htmlStream = fs.createReadStream(filePath);
 
 // Optionen für den E-Mail-Versand
 const mailOptions = {
-    from: 'n.faizy@buddy2learn.com', // Absender
+    from: 'email', // Absender
     to: to, // Empfänger
     subject: subject, // Betreff
     text: text, // Text der E-Mail
